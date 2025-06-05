@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/Page/static/css/main.730c3b43.css",
+    "main.js": "/Page/static/js/main.d7a3069e.js",
+    "static/js/453.5f8ff531.chunk.js": "/Page/static/js/453.5f8ff531.chunk.js",
+    "static/media/fondo.png": "/Page/static/media/fondo.e76197f407ea1ea0ff56.png",
+    "static/media/Alliylogo.png": "/Page/static/media/Alliylogo.e135b57b7f5675177554.png",
+    "static/media/violencia.jpg": "/Page/static/media/violencia.3d11e7928a0d992d496e.jpg",
+    "index.html": "/Page/index.html",
+    "main.730c3b43.css.map": "/Page/static/css/main.730c3b43.css.map",
+    "main.d7a3069e.js.map": "/Page/static/js/main.d7a3069e.js.map",
+    "453.5f8ff531.chunk.js.map": "/Page/static/js/453.5f8ff531.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.730c3b43.css",
+    "static/js/main.d7a3069e.js"
+  ]
+}
