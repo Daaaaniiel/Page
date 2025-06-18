@@ -1,8 +1,9 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import background from "../assets/fondo.png"; // usa tu fondo azul aquí
+import background from "../assets/fondo.png";
 import { useIdioma } from "./TraductorGeneral";
 import FloatingTranslatorButton from "./FloatingTranslatorButton";
+import { FaFacebookF, FaInstagram, FaTiktok } from "react-icons/fa";
 
 const HeroSection = () => {
   const { traducido, traducciones } = useIdioma();
@@ -10,19 +11,19 @@ const HeroSection = () => {
   const textos = {
     titulo: "Bienvenido a Alliy",
     subtitulo:
-      "Tu espacio seguro con información, apoyo y orientación sobre salud mental",
+      "Tu espacio confiable para apoyar la salud mental en comunidades rurales",
     queEs: "¿Qué es Alliy?",
     parrafo1:
-      "Alliy es una plataforma creada para brindar orientación emocional y educativa a personas que han vivido o están viviendo situaciones de violencia. Nuestro enfoque está en la salud mental, el autocuidado y la prevención.",
+      "Alliy es una plataforma diseñada para acompañar a personas que viven en comunidades rurales, brindando orientación emocional, herramientas de autocuidado y acceso a información útil para fortalecer el bienestar mental.",
     objetivo: "Objetivo",
     parrafo2:
-      "Ser un espacio de apoyo empático y seguro, donde puedas informarte, identificar señales de alerta, conocer tus derechos y acceder a recursos útiles para tu bienestar emocional.",
+      "Contribuir al bienestar emocional en zonas rurales, superando barreras como el aislamiento, la falta de atención especializada y el estigma, mediante contenidos accesibles, empáticos y culturalmente adaptados.",
     contenido: "¿Qué encontrarás aquí?",
-    item1: "Tipos de violencia: conoce las formas en que puede manifestarse.",
-    item2: "Señales de alerta: aprende a reconocer síntomas emocionales y físicos.",
-    item3: "Recursos de ayuda: accede a orientación y a un chatbot empático.",
-    item4: "Consejos: estrategias para cuidar tu salud mental y emocional.",
-    item5: "ChatBot: conversación anónima y segura disponible 24/7."
+    item1: "Factores que afectan la salud mental en zonas rurales.",
+    item2: "Señales de alerta para identificar situaciones de riesgo emocional.",
+    item3: "Recursos de ayuda disponibles en entornos rurales.",
+    item4: "Consejos prácticos para el autocuidado y el manejo del estrés.",
+    item5: "ChatBot Alliy: acompaña de forma anónima y segura, disponible 24/7."
   };
 
   const t = (clave) => (traducido ? traducciones[clave] || textos[clave] : textos[clave]);
@@ -39,7 +40,8 @@ const HeroSection = () => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        padding: "4rem 1rem"
+        padding: "4rem 1rem",
+        flexDirection: "column"
       }}
     >
       <div
@@ -77,6 +79,39 @@ const HeroSection = () => {
           </div>
         </Container>
       </div>
+
+      {/* Redes sociales con texto */}
+<div className="mt-4 text-center" style={{ zIndex: 2 }}>
+  <p className="mb-2 fw-semibold" style={{ fontSize: "1.1rem", color: "#000" }}>
+    Síguenos en nuestras redes sociales
+  </p>
+  <div className="d-flex justify-content-center gap-4">
+    <a
+      href="https://facebook.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-dark fs-4 d-flex align-items-center gap-2"
+    >
+      <FaFacebookF /> Facebook
+    </a>
+    <a
+      href="https://instagram.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-dark fs-4 d-flex align-items-center gap-2"
+    >
+      <FaInstagram /> Instagram
+    </a>
+    <a
+      href="https://tiktok.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-dark fs-4 d-flex align-items-center gap-2"
+    >
+      <FaTiktok /> TikTok
+    </a>
+  </div>
+</div>
 
       <FloatingTranslatorButton textos={textos} />
     </div>

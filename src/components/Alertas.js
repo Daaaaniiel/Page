@@ -1,32 +1,32 @@
 import React from "react";
 import { Row, Col, Card } from "react-bootstrap";
-import {
-  BsEmojiFrownFill,
-  BsPersonXFill,
-  BsExclamationTriangleFill,
-  BsShieldLockFill,
-  BsEyeSlashFill
-} from "react-icons/bs";
 import { useIdioma } from "./TraductorGeneral";
 import FloatingTranslatorButton from "./FloatingTranslatorButton";
+
+// Imágenes personalizadas por cada alerta
+import emocionalImg from "../assets/emocional.jpg";
+import aislamientoImg from "../assets/aislamientos.png";
+import fisicoImg from "../assets/fisico.jpeg";
+import dependenciaImg from "../assets/dependencia.png";
+import controlImg from "../assets/control.jpg";
 
 const Alertas = () => {
   const { traducido, traducciones } = useIdioma();
 
   const textos = {
-    titulo: "🚨 Señales de Alerta",
+    titulo: "Señales de Alerta en zonas rurales",
     introduccion:
-      "Identificar señales de alerta puede salvar vidas. Estar atentos a estos síntomas es clave para actuar a tiempo:",
+      "Reconocer signos de deterioro en la salud mental puede marcar la diferencia. En comunidades rurales, estas señales suelen estar invisibilizadas o normalizadas. Aquí te mostramos algunas importantes:",
     emocional:
-      "Cambios emocionales o psicológicos: Ansiedad, tristeza o llanto frecuente sin causa aparente. Miedo constante a desagradar a su pareja o conviviente. Baja autoestima y autocrítica excesiva. Irritabilidad, nerviosismo o agresividad repentina. Dificultad para concentrarse o tomar decisiones.",
+      "Ansiedad, tristeza persistente o cambios repentinos de ánimo. Problemas de sueño, irritabilidad o sensación constante de preocupación. Dificultad para disfrutar cosas cotidianas.",
     social:
-      "Aislamiento social: Se aleja de familiares y amistades. Excusas constantes para no salir o comunicarse. Deja actividades que antes disfrutaba (estudios, hobbies, trabajo).",
+      "Aislamiento de la comunidad. Evita encuentros, asambleas o celebraciones. Prefiere estar solo o se muestra apático ante las visitas.",
     fisico:
-      "Cambios físicos o de apariencia: Ropa que cubre demasiado el cuerpo, incluso en clima caluroso. Moretones, heridas o quemaduras mal explicadas. Pérdida o aumento de peso repentino. Mal cuidado personal (deja de arreglarse o asearse).",
+      "Malestar físico recurrente sin causa médica clara. Pérdida o aumento de peso, fatiga constante o cambios notables en la higiene personal.",
     dependencia:
-      "Conductas de dependencia o sumisión: Consulta todo con su pareja antes de hablar o decidir. Muestra miedo o nerviosismo al recibir mensajes o llamadas. Justifica constantemente las actitudes agresivas de su pareja.",
+      "Personas que se muestran inseguras, que dependen de otros para tomar decisiones básicas o que sienten que no pueden hacer nada sin aprobación.",
     control:
-      "Signos de control o vigilancia: Su pareja revisa su celular, redes o movimientos. Le restringen el dinero o el acceso a transporte. Le impiden trabajar, estudiar o ver a otras personas."
+      "Familia o entorno que limita su libertad, impone tareas forzadas, le impide buscar ayuda médica o lo desacredita emocionalmente."
   };
 
   const t = (clave) => (traducido ? traducciones[clave] || textos[clave] : textos[clave]);
@@ -35,32 +35,27 @@ const Alertas = () => {
     {
       titulo: "Cambios emocionales o psicológicos",
       clave: "emocional",
-      color: "danger",
-      icono: <BsEmojiFrownFill size={24} className="me-2" />
+      imagen: emocionalImg
     },
     {
       titulo: "Aislamiento social",
       clave: "social",
-      color: "warning",
-      icono: <BsPersonXFill size={24} className="me-2" />
+      imagen: aislamientoImg
     },
     {
-      titulo: "Cambios físicos o de apariencia",
+      titulo: "Síntomas físicos sin explicación",
       clave: "fisico",
-      color: "info",
-      icono: <BsExclamationTriangleFill size={24} className="me-2" />
+      imagen: fisicoImg
     },
     {
-      titulo: "Conductas de dependencia o sumisión",
+      titulo: "Conductas de dependencia emocional",
       clave: "dependencia",
-      color: "secondary",
-      icono: <BsShieldLockFill size={24} className="me-2" />
+      imagen: dependenciaImg
     },
     {
-      titulo: "Signos de control o vigilancia",
+      titulo: "Limitaciones o control del entorno",
       clave: "control",
-      color: "dark",
-      icono: <BsEyeSlashFill size={24} className="me-2" />
+      imagen: controlImg
     }
   ];
 
@@ -68,43 +63,39 @@ const Alertas = () => {
     <section
       id="alertas"
       style={{
-        backgroundImage: `url('https://img.freepik.com/vector-gratis/fondo-plano-dia-mundial-salud-mental_23-2149671209.jpg')`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
+        background: "#f7f9fc",
         padding: "4rem 2rem"
       }}
     >
       <div className="text-center mb-4">
-        <h2 style={{ color: "#000" }}>{t("titulo")}</h2>
+        <h2 className="text-primary fw-bold">{t("titulo")}</h2>
       </div>
       <p
-        className="text-center mb-5 fs-5"
-        style={{ color: "#000", maxWidth: "800px", margin: "0 auto" }}
+        className="text-center mb-5 fs-5 text-muted"
+        style={{ maxWidth: "900px", margin: "0 auto" }}
       >
         {t("introduccion")}
       </p>
-      <Row className="g-4 mt-4">
+      <Row className="g-4">
         {alertas.map((item, index) => (
           <Col md={6} lg={4} key={index}>
-            <Card
-              bg={item.color}
-              text="white"
-              className="h-100 shadow border-0"
-            >
+            <Card className="h-100 shadow-sm border-0 rounded-4">
+              <Card.Img
+                variant="top"
+                src={item.imagen}
+                alt={item.titulo}
+                style={{ height: "200px", objectFit: "cover" }}
+              />
               <Card.Body>
-                <Card.Title className="d-flex align-items-center">
-                  {item.icono}
+                <Card.Title className="text-dark fw-bold fs-5">
                   {item.titulo}
                 </Card.Title>
-                <ul className="mt-3">
+                <ul className="mt-3 text-dark lh-lg">
                   {t(item.clave)
                     .split(". ")
                     .filter((line) => line.trim())
                     .map((linea, idx) => (
-                      <li key={idx} style={{ lineHeight: "1.6" }}>
-                        {linea.trim()}
-                      </li>
+                      <li key={idx}>{linea.trim()}</li>
                     ))}
                 </ul>
               </Card.Body>
@@ -118,5 +109,6 @@ const Alertas = () => {
 };
 
 export default Alertas;
+
 
 

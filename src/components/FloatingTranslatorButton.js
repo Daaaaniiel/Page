@@ -10,7 +10,7 @@ const FloatingTranslatorButton = ({ textos }) => {
       style={{
         position: "fixed",
         bottom: "20px",
-        right: "20px",
+        left: "20px",      
         zIndex: 9999
       }}
     >
@@ -25,3 +25,4 @@ const FloatingTranslatorButton = ({ textos }) => {
 };
 
 export default FloatingTranslatorButton;
+

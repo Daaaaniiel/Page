@@ -3,7 +3,6 @@ import { Row, Col, Card, Collapse, Button, Container } from "react-bootstrap";
 import FloatingTranslatorButton from "./FloatingTranslatorButton";
 import { useIdioma } from "./TraductorGeneral";
 
-// Puedes colocar tus imágenes personalizadas en assets y llamarlas aquí
 import imgAislamiento from "../assets/aislamiento.jpg";
 import imgPobreza from "../assets/pobreza.jpeg";
 import imgAcceso from "../assets/salud.png";
