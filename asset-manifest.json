@@ -1,18 +1,28 @@
 {
   "files": {
     "main.css": "/Page/static/css/main.730c3b43.css",
-    "main.js": "/Page/static/js/main.d7a3069e.js",
+    "main.js": "/Page/static/js/main.26eff8ac.js",
     "static/js/453.5f8ff531.chunk.js": "/Page/static/js/453.5f8ff531.chunk.js",
     "static/media/fondo.png": "/Page/static/media/fondo.e76197f407ea1ea0ff56.png",
+    "static/media/control.jpg": "/Page/static/media/control.c8c9d26a3adf932c64a7.jpg",
     "static/media/Alliylogo.png": "/Page/static/media/Alliylogo.e135b57b7f5675177554.png",
-    "static/media/violencia.jpg": "/Page/static/media/violencia.3d11e7928a0d992d496e.jpg",
+    "static/media/salud.png": "/Page/static/media/salud.16e12a646c674d4680f2.png",
+    "static/media/habla.png": "/Page/static/media/habla.9a7bb71297aca454ff4a.png",
+    "static/media/autocuidado.png": "/Page/static/media/autocuidado.13b178f1fb1831b92349.png",
+    "static/media/emocional.jpg": "/Page/static/media/emocional.88a033bc1f8a526963b0.jpg",
+    "static/media/aislamiento.jpg": "/Page/static/media/aislamiento.b9d82e48fc75c91608cc.jpg",
+    "static/media/comunitario.jpg": "/Page/static/media/comunitario.086b0730c06e23c155ee.jpg",
+    "static/media/dependencia.png": "/Page/static/media/dependencia.e2d7f2ee27c732391def.png",
+    "static/media/limites.jpg": "/Page/static/media/limites.4007a29e9e3d72422094.jpg",
+    "static/media/pobreza.jpeg": "/Page/static/media/pobreza.72769acbf6e964857c38.jpeg",
+    "static/media/profesional.png": "/Page/static/media/profesional.d3bbb4647338aabf4c4b.png",
     "index.html": "/Page/index.html",
     "main.730c3b43.css.map": "/Page/static/css/main.730c3b43.css.map",
-    "main.d7a3069e.js.map": "/Page/static/js/main.d7a3069e.js.map",
+    "main.26eff8ac.js.map": "/Page/static/js/main.26eff8ac.js.map",
     "453.5f8ff531.chunk.js.map": "/Page/static/js/453.5f8ff531.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.730c3b43.css",
-    "static/js/main.d7a3069e.js"
+    "static/js/main.26eff8ac.js"
   ]
 }
