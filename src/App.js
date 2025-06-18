@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavbarAlliy from "./components/NavbarAlliy";
 import FooterAlliy from "./components/FooterAlliy";
 import HeroSection from "./components/HeroSection";
-import TiposViolencia from "./components/TiposViolencia";
+import FactoresRurales from "./components/FactoresRurales"; // ✅ NUEVO COMPONENTE
 import Alertas from "./components/Alertas";
 import Recursos from "./components/Recursos";
 import Consejos from "./components/Consejos";
@@ -21,7 +21,7 @@ function App() {
           <main style={{ flex: 1 }}>
             <Routes>
               <Route path="/" element={<HeroSection />} />
-              <Route path="/tipos" element={<TiposViolencia />} />
+              <Route path="/tipos" element={<FactoresRurales />} /> {/* ✅ RUTA ACTUALIZADA */}
               <Route path="/alertas" element={<Alertas />} />
               <Route path="/recursos" element={<Recursos />} />
               <Route path="/consejos" element={<Consejos />} />

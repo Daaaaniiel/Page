@@ -17,7 +17,7 @@ const NavbarAlliy = () => (
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ms-auto">
-          <Nav.Link as={Link} to="/tipos">Tipos</Nav.Link>
+          <Nav.Link as={Link} to="/factores">Salud Mental Rural</Nav.Link>
           <Nav.Link as={Link} to="/alertas">Alerta</Nav.Link>
           <Nav.Link as={Link} to="/recursos">Recursos</Nav.Link>
           <Nav.Link as={Link} to="/consejos">Consejos</Nav.Link>
@@ -28,3 +28,4 @@ const NavbarAlliy = () => (
 );
 
 export default NavbarAlliy;
+

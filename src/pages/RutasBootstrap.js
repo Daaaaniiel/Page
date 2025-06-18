@@ -1,11 +1,11 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 
-export function TiposViolenciaPage() {
+export function FactoresRuralesPage() {
   return (
     <Container className="my-5">
-      <h2 className="text-center text-primary mb-4">Tipos de Violencia</h2>
-      <p>Aquí se explica cada tipo de violencia: física, psicológica, económica, patrimonial y sexual, con ejemplos claros.</p>
+      <h2 className="text-center text-primary mb-4">Salud Mental en Zonas Rurales</h2>
+      <p>Explora los factores sociales, económicos y culturales que afectan la salud mental de quienes viven en comunidades rurales.</p>
     </Container>
   );
 }

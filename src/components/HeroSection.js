@@ -10,14 +10,14 @@ const HeroSection = () => {
   const textos = {
     titulo: "Bienvenido a Alliy",
     subtitulo:
-      "Tu espacio seguro con información, apoyo y orientación sobre salud mental en casos de violencia",
+      "Tu espacio seguro con información, apoyo y orientación sobre salud mental",
     queEs: "¿Qué es Alliy?",
     parrafo1:
       "Alliy es una plataforma creada para brindar orientación emocional y educativa a personas que han vivido o están viviendo situaciones de violencia. Nuestro enfoque está en la salud mental, el autocuidado y la prevención.",
-    objetivo: "🎯 Objetivo",
+    objetivo: "Objetivo",
     parrafo2:
       "Ser un espacio de apoyo empático y seguro, donde puedas informarte, identificar señales de alerta, conocer tus derechos y acceder a recursos útiles para tu bienestar emocional.",
-    contenido: "📚 ¿Qué encontrarás aquí?",
+    contenido: "¿Qué encontrarás aquí?",
     item1: "Tipos de violencia: conoce las formas en que puede manifestarse.",
     item2: "Señales de alerta: aprende a reconocer síntomas emocionales y físicos.",
     item3: "Recursos de ayuda: accede a orientación y a un chatbot empático.",
